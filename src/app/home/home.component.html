@@ -1,0 +1,128 @@
+<!-- <body> -->
+
+    <!-- Header -->
+        <header id="header">
+            <div class="inner">
+                <a href="#" class="logo">Jockey</a>
+                <nav id="nav">
+                    <a [routerLink]="['/home']">Home</a>
+                    <a [routerLink]="['/about']">About Us</a>
+                    <a [routerLink]="['/contacts']">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+        
+        <!-- Banner -->
+        <section id="banner">
+            <div class="inner">
+                <div class="row">
+
+                    <div class="col-lg-4">
+                        
+                            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                                    <div class="form-group">
+                                        <label>First Name</label>
+                                        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                                            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Last Name</label>
+                                        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                                            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                            <div *ngIf="f.email.errors.required">Email is required</div>
+                                            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                            <div *ngIf="f.password.errors.required">Password is required</div>
+                                            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="backcolor">Register</button>
+                                    </div>
+                                </form>
+                    </div>
+                    <div class="col-lg-4">
+                        
+                       
+                    </div>
+                    <div class="col-lg-4">
+
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- One -->
+        <section id="one">
+            <div class="inner">
+                <header>
+                    <h2>Magna Etiam Lorem</h2>
+                </header>
+                <p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet nibh viverra malesuada. Nunc sem lacus, accumsan quis, faucibus non, congue vel, arcu, erisque hendrerit tellus. Integer sagittis. Vivamus a mauris eget arcu gravida tristique. Nunc iaculis mi in ante.</p>
+                <ul class="actions">
+                    <li><a href="#" class="button alt">Learn More</a></li>
+                </ul>
+            </div>
+        </section>
+
+    <!-- Two -->
+        <section id="two">
+            <div class="inner">
+                <article>
+                    <div class="content">
+                        <header>
+                            <h3>Pellentesque adipis</h3>
+                        </header>
+                        <div class="image fit">
+                            <img src="images/pic01.jpg" alt="" />
+                        </div>
+                        <p>Cumsan mollis eros. Pellentesque a diam sit amet mi magna ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet lorem ipsum feugiat tempus.</p>
+                    </div>
+                </article>
+                <article class="alt">
+                    <div class="content">
+                        <header>
+                            <h3>Morbi interdum mol</h3>
+                        </header>
+                        <div class="image fit">
+                            <img src="images/pic02.jpg" alt="" />
+                        </div>
+                        <p>Cumsan mollis eros. Pellentesque a diam sit amet mi magna ullamcorper vehicula. Integer adipiscin sem. Nullam quis massa sit amet lorem ipsum feugiat tempus.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    <!-- Footer -->
+        <section id="footer">
+            <div class="inner" style="text-align: center;">
+                <header>
+                    <h2>Footer</h2>
+                </header>
+                <div class="copyright" style="text-align: center;">
+                    &copy; 2020 Made by Navjot
+                </div>
+            </div>
+        </section>
+        <!-- <script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/skel.min.js"></script>
+        <script src="../../assets/js/util.js"></script>
+        <script src="../../assets/js/main.js"></script> -->
+
+<!-- </body> -->
